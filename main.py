@@ -209,6 +209,7 @@ def dhit():
 
         blackjack_shuffle('dealer')
 
+
 def phit():
     global pposition
     if pposition < 5:
@@ -254,31 +255,7 @@ def phit():
             root.title(f'Round Complete - No Cards in Deck')
 
         blackjack_shuffle('player')
-"""
-def hit():
-    try:
-        card = random.choice(deck)
-        deck.remove(card)
-        dealer.append(card)
 
-        global dealer_image
-        dealer_image = resize_cards(f'C:/Users/xlDeathEaterlx/Desktop/Cards/{card}.png')
-        dealer_label.config(image=dealer_image)
-
-        card = random.choice(deck)
-        deck.remove(card)
-        player.append(card)
-
-        global player_image
-        player_image = resize_cards(f'C:/Users/xlDeathEaterlx/Desktop/Cards/{card}.png')
-        player_label.config(image=player_image)
-
-        root.title(f'Blackjack - {len(deck)} Cards Left')
-
-    except:
-        root.title(f'Round Complete - No Cards in Deck')
-
-"""
 mainframe = Frame(root, bg='green')
 mainframe.pack(pady=20)
 
